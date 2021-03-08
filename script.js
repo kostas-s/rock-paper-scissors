@@ -35,6 +35,11 @@ function evaluateRound() {
                    console.log("===CPU WINS===")
                    computerScore++
                }
+    printScores()
+}
+
+function printScores() {
+    console.log(`===CURRENT SCORES===\n PLAYER: ${playerScore}\n CPU: ${computerScore}`)
 }
 
 function resetSelections(){
