@@ -5,6 +5,13 @@ let roundNumber = 1
 let playerScore = 0
 let computerScore = 0
 
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach((btn) =>{
+    btn.addEventListener('click', (e) => {
+        //btn.classList.toggle(".hover");
+    })
+})
+
 function computerPlay(){
     computerSelection = options[Math.floor(Math.random() * options.length)]
 }

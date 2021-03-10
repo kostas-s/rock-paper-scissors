@@ -10,11 +10,13 @@ img {
   padding: 1em;
   background-color: #c8c6a7aa;
   box-shadow: 0 0 5px 2px #435560aa;
+  transition: all 0.05s;
 }
 
-.hover {
+img:hover {
   box-shadow: 0 0 10px 10px #435560aa;
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .controls {
