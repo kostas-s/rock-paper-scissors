@@ -1,0 +1,25 @@
+body {
+  background-color: #6e7c7c;
+  color: #e3e3e3;
+}
+
+img {
+  height: 180px;
+  border: 16px solid #435560;
+  border-radius: 32px;
+  padding: 1em;
+  background-color: #c8c6a7aa;
+  box-shadow: 0 0 5px 2px #435560aa;
+}
+
+.hover {
+  box-shadow: 0 0 10px 10px #435560aa;
+  transform: scale(1.1);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: auto;
+}
