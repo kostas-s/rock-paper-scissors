@@ -1,10 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
 body {
   background-color: #6e7c7c;
   color: #e3e3e3;
+  font-family: "Architects Daughter", cursive;
 }
 
-img {
+.title {
+  font-size: 2em;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
   height: 180px;
+  width: 180px;
   border: 16px solid #435560;
   border-radius: 32px;
   padding: 1em;
@@ -13,15 +23,34 @@ img {
   transition: all 0.05s;
 }
 
-img:hover {
+.btn:hover {
   box-shadow: 0 0 10px 10px #435560aa;
   transform: scale(1.1);
   cursor: pointer;
 }
 
+img {
+  height: 100%;
+}
+
 .controls {
+  padding-top: 4em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: 1000px;
   margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    height: 45px;
+    width: 45px;
+  }
+  .title {
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
 }
