@@ -31,6 +31,7 @@ body {
 
 img {
   height: 100%;
+  pointer-events: none;
 }
 
 .controls {

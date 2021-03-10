@@ -8,9 +8,12 @@ let computerScore = 0
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach((btn) =>{
     btn.addEventListener('click', (e) => {
-        //btn.classList.toggle(".hover");
+        playerPlay(e.target.dataset.type)
     })
 })
+
+const playerScoreOutput = document.querySelector('.player-score');
+const computerScoreOutput = document.querySelector('.computer-score');
 
 function computerPlay(){
     computerSelection = options[Math.floor(Math.random() * options.length)]
@@ -20,12 +23,9 @@ function sanitizeInput(text){
     return text.trim().charAt(0).toUpperCase() + text.trim().substr(1).toLowerCase()
 }
 
-function playerPlay() {
-    while (!playerSelection) {
-        playerSelection = sanitizeInput(prompt("What is your move? Rock Paper or Scissors?"))
-        if (options.indexOf(playerSelection) !== -1) return
-        playerSelection = null
-    }
+function playerPlay(move) {
+    playerSelection = sanitizeInput(move)
+    round();
 }
 
 function evaluateRound() {
@@ -47,6 +47,8 @@ function evaluateRound() {
 
 function printScores() {
     console.log(`===CURRENT SCORES===\n PLAYER: ${playerScore}\n CPU: ${computerScore}`)
+    playerScoreOutput.textContent = playerScore;
+    computerScoreOutput.textContent = computerScore;
 }
 
 function resetSelections(){
@@ -55,13 +57,10 @@ function resetSelections(){
 }
 
 function round() {
-    for (let i = 0; i < 5; i++){
-        playerPlay()
-        computerPlay()
-        evaluateRound()
-        resetSelections()
-        roundNumber++
-    }
+    computerPlay()
+    evaluateRound()
+    resetSelections()
+    roundNumber++
 }
 
 console.log("I WANNA ROCK!!!")
