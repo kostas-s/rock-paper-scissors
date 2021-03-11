@@ -14,6 +14,8 @@ buttons.forEach((btn) =>{
 
 const playerScoreOutput = document.querySelector('.player-score');
 const computerScoreOutput = document.querySelector('.computer-score');
+const messageOutput = document.querySelector('.message');
+const roundResultOutput = document.querySelector('.round-result');
 
 function computerPlay(){
     computerSelection = options[Math.floor(Math.random() * options.length)]
@@ -29,19 +31,25 @@ function playerPlay(move) {
 }
 
 function evaluateRound() {
+    let result = "";
     console.log(`\n-ROUND ${roundNumber} EVALUATION-`)
     console.log("PLAYER CHOICE: ", playerSelection)
     console.log("COMPUTER CHOICE: ", computerSelection)
     if (options.indexOf(playerSelection) - options.indexOf(computerSelection) === 0) {
         console.log("===DRAW===")
+        result = "Draw";
     } else if (options.indexOf(playerSelection) - options.indexOf(computerSelection) === 1 ||
                options.indexOf(playerSelection) - options.indexOf(computerSelection) === -2){
                    console.log("===PLAYER WINS===")
+                   result = "Player Wins!";
                    playerScore++
                } else {
                    console.log("===CPU WINS===")
+                   result = "CPU Wins...";
                    computerScore++
                }
+    roundResultOutput.textContent = `Round ${roundNumber}: ${result}`
+    messageOutput.textContent = `Player chose ${playerSelection}, CPU chose ${computerSelection}...`;
     printScores()
 }
 

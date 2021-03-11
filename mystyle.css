@@ -56,7 +56,16 @@ th {
 }
 
 .message {
-  margin: 2em;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.round-result {
+  height: 40px;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 @media only screen and (max-width: 768px) {
