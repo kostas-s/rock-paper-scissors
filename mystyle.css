@@ -82,4 +82,8 @@ th {
   .scoreboard {
     font-size: 1.6em;
   }
+
+  .controls {
+    padding-top: 2em;
+  }
 }
