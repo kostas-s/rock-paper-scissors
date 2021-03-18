@@ -6,6 +6,7 @@ The classic game, right in your browser through vanilla JS!
 
 - Animations for win/lose
 - Sound effects
+- Better adapt size on smaller PC screens
 
 ## Live Version
 
